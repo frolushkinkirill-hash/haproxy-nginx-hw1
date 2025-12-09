@@ -1,0 +1,36 @@
+ФИНАЛЬНЫЕ РЕЗУЛЬТАТЫ ТЕСТИРОВАНИЯ
+==================================
+
+Задание 1: Round-robin балансировка (порт 9000)
+----------------------------------------------
+Тестовые запросы:
+1: Server 1
+2: Server 2
+3: Server 1
+4: Server 2
+5: Server 1
+6: Server 2
+7: Server 1
+8: Server 2
+
+✅ Идеальное чередование - Round-robin работает корректно!
+
+Задание 2: Weighted Round Robin (порт 9001)
+------------------------------------------
+1. С доменом example.local (weighted balancing):
+   1: Weighted Server 3 (вес 4)
+   2: Weighted Server 2 (вес 3)
+   3: Weighted Server 3 (вес 4)
+   4: Weighted Server 1 (вес 2)
+   5: Weighted Server 2 (вес 3)
+   6: Weighted Server 3 (вес 4)
+
+2. Без домена example.local (default server):
+   1: Default Server
+   2: Default Server
+   3: Default Server
+
+✅ Domain-based routing работает корректно
+✅ Weighted balancing распределяет запросы согласно весам
+
+ВСЕ ТРЕБОВАНИЯ ВЫПОЛНЕНЫ УСПЕШНО!
